@@ -19,6 +19,9 @@
 		61833687195A73BC00B90202 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6183366F195A73BC00B90202 /* UIKit.framework */; };
 		6183368F195A73BC00B90202 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6183368D195A73BC00B90202 /* InfoPlist.strings */; };
 		61833691195A73BC00B90202 /* BlurDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61833690195A73BC00B90202 /* BlurDemoTests.m */; };
+		6183369E195A747300B90202 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 6183369C195A747300B90202 /* UIImage+ImageEffects.m */; };
+		618336A1195A74E400B90202 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6183369F195A74E400B90202 /* RootViewController.m */; };
+		618336A3195A753A00B90202 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 618336A2195A753A00B90202 /* GPUImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,11 @@
 		6183368C195A73BC00B90202 /* BlurDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlurDemoTests-Info.plist"; sourceTree = "<group>"; };
 		6183368E195A73BC00B90202 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		61833690195A73BC00B90202 /* BlurDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlurDemoTests.m; sourceTree = "<group>"; };
+		6183369B195A747300B90202 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		6183369C195A747300B90202 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		6183369F195A74E400B90202 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		618336A0195A74E400B90202 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		618336A2195A753A00B90202 /* GPUImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GPUImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6183366E195A73BC00B90202 /* CoreGraphics.framework in Frameworks */,
+				618336A3195A753A00B90202 /* GPUImage.framework in Frameworks */,
 				61833670195A73BC00B90202 /* UIKit.framework in Frameworks */,
 				6183366C195A73BC00B90202 /* Foundation.framework in Frameworks */,
 			);
@@ -96,6 +105,7 @@
 		6183366A195A73BC00B90202 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				618336A2195A753A00B90202 /* GPUImage.framework */,
 				6183366B195A73BC00B90202 /* Foundation.framework */,
 				6183366D195A73BC00B90202 /* CoreGraphics.framework */,
 				6183366F195A73BC00B90202 /* UIKit.framework */,
@@ -109,7 +119,10 @@
 			children = (
 				6183367A195A73BC00B90202 /* AppDelegate.h */,
 				6183367B195A73BC00B90202 /* AppDelegate.m */,
+				6183369F195A74E400B90202 /* RootViewController.m */,
+				618336A0195A74E400B90202 /* RootViewController.h */,
 				6183367D195A73BC00B90202 /* Images.xcassets */,
+				6183369A195A747300B90202 /* UIImage+ImageEffects */,
 				61833672195A73BC00B90202 /* Supporting Files */,
 			);
 			path = BlurDemo;
@@ -142,6 +155,15 @@
 				6183368D195A73BC00B90202 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6183369A195A747300B90202 /* UIImage+ImageEffects */ = {
+			isa = PBXGroup;
+			children = (
+				6183369B195A747300B90202 /* UIImage+ImageEffects.h */,
+				6183369C195A747300B90202 /* UIImage+ImageEffects.m */,
+			);
+			path = "UIImage+ImageEffects";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +263,8 @@
 			files = (
 				6183367C195A73BC00B90202 /* AppDelegate.m in Sources */,
 				61833678195A73BC00B90202 /* main.m in Sources */,
+				618336A1195A74E400B90202 /* RootViewController.m in Sources */,
+				6183369E195A747300B90202 /* UIImage+ImageEffects.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +381,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BlurDemo/BlurDemo-Prefix.pch";
 				INFOPLIST_FILE = "BlurDemo/BlurDemo-Info.plist";
@@ -370,6 +398,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BlurDemo/BlurDemo-Prefix.pch";
 				INFOPLIST_FILE = "BlurDemo/BlurDemo-Info.plist";
