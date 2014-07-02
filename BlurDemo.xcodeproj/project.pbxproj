@@ -119,8 +119,8 @@
 			children = (
 				6183367A195A73BC00B90202 /* AppDelegate.h */,
 				6183367B195A73BC00B90202 /* AppDelegate.m */,
-				6183369F195A74E400B90202 /* RootViewController.m */,
 				618336A0195A74E400B90202 /* RootViewController.h */,
+				6183369F195A74E400B90202 /* RootViewController.m */,
 				6183367D195A73BC00B90202 /* Images.xcassets */,
 				6183369A195A747300B90202 /* UIImage+ImageEffects */,
 				61833672195A73BC00B90202 /* Supporting Files */,
@@ -469,6 +469,7 @@
 				61833696195A73BC00B90202 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61833697195A73BC00B90202 /* Build configuration list for PBXNativeTarget "BlurDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +478,7 @@
 				61833699195A73BC00B90202 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

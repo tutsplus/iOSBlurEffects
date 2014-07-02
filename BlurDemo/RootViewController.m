@@ -12,14 +12,14 @@
 
 @interface RootViewController ()
 
-@property UIView *bgMask;
+@property UIView *blurMask;
 @property UIImageView *blurredBgImage;
 
 @end
 
 @implementation RootViewController
 
-@synthesize bgMask, blurredBgImage;
+@synthesize blurMask, blurredBgImage;
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -65,18 +65,18 @@
 
     /*::::::::::::::::::: Create Mask for Blurred View :::::::::::::::::::::*/
     
-    bgMask = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 50, self.view.frame.size.width, 50)];
-    bgMask.backgroundColor = [UIColor whiteColor];
-    blurredBgImage.layer.mask = bgMask.layer;
+    blurMask = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 50, self.view.frame.size.width, 50)];
+    blurMask.backgroundColor = [UIColor whiteColor];
+    blurredBgImage.layer.mask = blurMask.layer;
     
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    bgMask.frame = CGRectMake(bgMask.frame.origin.x,
+    blurMask.frame = CGRectMake(blurMask.frame.origin.x,
                               self.view.frame.size.height - 50 - scrollView.contentOffset.y,
-                              bgMask.frame.size.width,
-                              bgMask.frame.size.height + scrollView.contentOffset.y);
+                              blurMask.frame.size.width,
+                              blurMask.frame.size.height + scrollView.contentOffset.y);
 }
 
 - (UIImage *)takeSnapshotOfView:(UIView *)view
